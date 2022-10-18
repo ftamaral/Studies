@@ -7,11 +7,11 @@ from pynput.keyboard import Controller
 
 
 #--------- VARIÁVEIS -------------------------
-keyboard = Controller()
-df = pd.read_excel('C:\\Vscode\\bitlocker\\primeiros15\\primeiros15.xlsx')
-msn = 'Em conjunto com o time de Segurança da Informação, estamos avaliando algumas estações que estão com a criptografia desativada, gerando risco de perda de dados corporativos. A sua estação foi reportada com esta falha e precisamos corrigir.\n'
-bd = 'Olá, bom dia\n'
 
+keyboard = Controller()
+df = pd.read_excel('C:\\planilha_excel.xlsx')
+bd = 'Olá, bom dia\n'
+teste_auto = 'É uma mensagem de teste, não precisa ser respondida.\n'
 
 #--------- AUTOMAÇÃO -------------------------
 
@@ -29,5 +29,3 @@ for u in df["Usuario"]:
     pyautogui.leftClick(x=663, y=835)
     sleep(2)
     keyboard.type(bd)
-    sleep(1)
-    keyboard.type(msn)
